@@ -44,7 +44,17 @@ Delete cron jobs from your system.
 
 This extension has only been tested on MacOS Sequoia. If you have any issues, please open an issue on the [GitHub repository](https://github.com/cartermcalister/cron-manager).
 
-It uses crontab to display and edit your cron jobs. If you have existing cron jobs, you will need to add a `# Name:` and `# Description:` to each job. See [cronfile.md](cronfile.md) for an example.
+It uses crontab to display and edit your cron jobs. If you have existing cron jobs, you will need to add a `# Name:` and `# Description:` to each job. See below for an example.
+
+```text
+# Name: Daily Backup
+# Description: Runs the backup scripts at 4:30am
+30 4 * * * ~/Developer/scripts/cron/backup.sh
+
+# Name: Apache Kludge
+# Description: Runs the Apache check script every minute of every day
+* * * * * ~/Developer/scripts/cron/check-apache.sh
+```
 
 ## Author
 
